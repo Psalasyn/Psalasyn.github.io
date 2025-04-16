@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en"> <head>
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Universal Containers</title> <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script>
+        function timestamp() {
+            var response = document.getElementById("g-recaptcha-response");
+            if (response == null || response.value.trim() == "") {
+                var elems = JSON.parse(document.getElementsByName("captcha_settings")[0].value);
+                elems["ts"] = JSON.stringify(new Date().getTime());
+                document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems);
+            }
+        }
+        setInterval(timestamp, 500);
+    </script>
+    <style>
+        /* Salesforce-inspired Color Palette */
+        :root {
+            --salesforce-blue: #1589EE; /* Primary Blue */
+            --light-gray-background: #F3F3F3; /* Light Gray Background */
+            --dark-text: #333333; /* Dark Text Color */
+            --white: #FFFFFF;
+            --border-color: #DDDBDA; /* Subtle Border Color */
+            --input-background: #FFFFFF;
+            --label-color: #545454; /* Label Color */
+        }
+
+        /* General Body Styles */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            background-color: var(--light-gray-background);
+            color: var(--dark-text);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Align to top */
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+
+        /* Main Container */
+        .container {
+            background-color: var(--white);
+            padding: 30px 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: 1px solid var(--border-color);
+            max-width: 600px;
+            width: 100%;
+            box-sizing: border-box;
+            margin-top: 30px; /* Space at the top */
+            margin-bottom: 30px; /* Space at the bottom */
+        }
+
+        /* Form Title */
+        h2 {
+            color: var(--dark-text);
+            font-size: 1.8em;
+            margin-top: 0;
+            margin-bottom: 25px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        /* Label Styles */
+        label {
+            display: block;
+            margin-bottom: 6px;
+            color: var(--label-color);
+            font-weight: 600;
+            font-size: 0.95em;
+        }
+
+        /* Input, Textarea, and Select Styles */
+        input[type="text"],
+        textarea,
+        select { /* Added select here */
+            width: 100%;
+            padding: 10px 12px;
+            margin-bottom: 18px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            box-sizing: border-box;
+            background-color: var(--input-background);
+            font-size: 1em;
+            line-height: 1.4;
+            /* Ensure select inherits font */
+            font-family: inherit;
+        }
+
+        /* Focus Styles */
+        input[type="text"]:focus,
+        textarea:focus,
+        select:focus { /* Added select here */
+            outline: none;
+            border-color: var(--salesforce-blue);
+            box-shadow: 0 0 0 1px var(--salesforce-blue);
+        }
+
+        textarea {
+            resize: vertical; /* Allow vertical resize */
+            min-height: 60px;
+        }
+
+         /* Specific style for select dropdown arrow (may vary slightly by browser) */
+        select {
+            appearance: none; /* Remove default arrow */
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            /* Add custom arrow or background image */
+             background-image: url('data:image/svg+xml;utf8,<svg fill="%23545454" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+            background-size: 1.2em;
+            padding-right: 30px; /* Make space for the arrow */
+        }
+
+        /* reCAPTCHA spacing */
+        .g-recaptcha {
+            margin-bottom: 20px;
+        }
+
+        /* Submit Button Styles */
+        input[type="submit"] {
+            background-color: var(--salesforce-blue);
+            color: var(--white);
+            padding: 12px 25px;
+            border: none;
+            border-radius: 4px;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            display: block; /* Make it block level */
+            width: 100%;
+            transition: background-color 0.2s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #005FB2; /* Slightly darker blue on hover */
+        }
+
+        /* Hide <br> tags generated by Salesforce if CSS margins are preferred */
+        form br {
+             display: none;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Contact Us - Universal Containers</h2> <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00Dbm00000KFz7q" method="POST">
+
+            <input type=hidden name='captcha_settings' value='{"keyname":"StrategicLeadAutomation","fallback":"true","orgId":"00Dbm00000KFz7q","ts":""}'>
+            <input type=hidden name="oid" value="00Dbm00000KFz7q">
+            <input type=hidden name="retURL" value="https://psalasyn.github.io/Return%20Page.html">
+
+            <label for="first_name">First Name</label>
+            <input  id="first_name" maxlength="40" name="first_name" size="20" type="text" required /><br>
+
+            <label for="last_name">Last Name</label>
+            <input  id="last_name" maxlength="80" name="last_name" size="20" type="text" required /><br>
+
+            <label for="email">Email</label>
+            <input  id="email" maxlength="80" name="email" size="20" type="text" required /><br>
+
+            <label for="company">Company</label>
+            <input  id="company" maxlength="40" name="company" size="20" type="text" /><br>
+
+            <label for="city">City</label>
+            <input  id="city" maxlength="40" name="city" size="20" type="text" /><br>
+
+            <label for="phone">Phone</label>
+            <input  id="phone" maxlength="40" name="phone" size="20" type="text" /><br>
+
+            <label for="00Nbm00000OtAP7">Primary Need:</label>
+            <textarea id="00Nbm00000OtAP7" name="00Nbm00000OtAP7" rows="3" type="text" wrap="soft"></textarea><br>
+
+            <label for="00Nbm00000OtYjB">Budget Range Selection:</label>
+            <select  id="00Nbm00000OtYjB" name="00Nbm00000OtYjB" title="Budget Range Selection">
+                <option value="">--None--</option>
+                <option value="< $5,000">&lt; $5,000</option>
+                <option value="$5,000 - $10,000">$5,000 - $10,000</option>
+                <option value="$10,001 - $25,000">$10,001 - $25,000</option>
+                <option value="$25,001 - $50,000">$25,001 - $50,000</option>
+                <option value="$50,001 - $100,000">$50,001 - $100,000</option>
+                <option value="> $100,000">&gt; $100,000</option>
+                <option value="Not Sure / To Be Defined">Not Sure / To Be Defined</option>
+            </select><br>
+
+            <label for="00Nbm00000Ot87K">How Heard About Us?:</label>
+            <textarea id="00Nbm00000Ot87K" name="00Nbm00000Ot87K" rows="2" type="text" wrap="soft"></textarea><br>
+
+            <div class="g-recaptcha" data-sitekey="6LdD4BorAAAAANeouwcpDIc-_et1qwT6iR7Egwt9"></div><br>
+
+            <input type="submit" name="submit" value="Submit Information"> </form>
+        </div>
+</body>
+</html>
