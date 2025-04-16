@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obrigado! - Universal Containers</title>
+    <style>
+        /* Define as cores inspiradas no Salesforce */
+        :root {
+            --salesforce-blue: #1589EE; /* Azul principal do Salesforce */
+            --light-gray-background: #F3F3F3; /* Fundo cinza claro */
+            --dark-text: #333333; /* Cor de texto escuro */
+            --white: #FFFFFF;
+            --border-color: #DDDBDA; /* Cor de borda sutil */
+            --success-green: #4CAF50; /* Opcional: Cor para ícone de sucesso */
+        }
+
+        /* Estilos gerais do corpo */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            background-color: var(--light-gray-background);
+            color: var(--dark-text);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+
+        /* Container principal */
+        .container {
+            background-color: var(--white);
+            padding: 30px 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: 1px solid var(--border-color);
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        /* Estilo do título principal */
+        h1 {
+            color: var(--salesforce-blue);
+            font-size: 2.5em;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        /* Estilo dos parágrafos */
+        p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        /* Estilo para links */
+        a {
+            color: var(--salesforce-blue);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Opcional: Ícone de sucesso (simples com CSS) */
+        .success-icon {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--success-green);
+            color: white;
+            font-size: 30px;
+            line-height: 50px; /* Centraliza o checkmark verticalmente */
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        .success-icon::before {
+            content: '✓'; /* Checkmark simples */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="success-icon"></div>
+
+        <h1>Obrigado!</h1>
+        <p>
+            Suas informações foram recebidas com sucesso pela <strong>Universal Containers</strong>.
+        </p>
+        <p>
+            Agradecemos seu interesse. Nossa equipe analisará sua solicitação e entrará em contato em breve.
+        </p>
+        <p>
+            <a href="#">Voltar ao site da Universal Containers</a>
+            </p>
+    </div>
+</body>
+</html>
