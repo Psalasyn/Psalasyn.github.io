@@ -78,6 +78,8 @@
 
         /* Input, Textarea, and Select Styles */
         input[type="text"],
+        input[type="email"], /* Adicionado para consistência */
+        input[type="tel"],  /* Adicionado para consistência */
         textarea,
         select {
             width: 100%;
@@ -94,6 +96,8 @@
 
         /* Focus Styles */
         input[type="text"]:focus,
+        input[type="email"]:focus, /* Adicionado */
+        input[type="tel"]:focus,   /* Adicionado */
         textarea:focus,
         select:focus {
             outline: none;
@@ -158,27 +162,15 @@
             <input type=hidden name="lead_source" value="Web">
 
             <label for="first_name">Nome</label>
-            <input  id="first_name" maxlength="40" name="first_name" size="20" type="text" required />
-
-            <label for="last_name">Sobrenome</label>
-            <input  id="last_name" maxlength="80" name="last_name" size="20" type="text" required />
-
-            <label for="email">E-mail</label>
-            <input  id="email" maxlength="80" name="email" size="20" type="text" required />
-
-            <label for="company">Empresa</label>
-            <input  id="company" maxlength="40" name="company" size="20" type="text" />
-
-            <label for="city">Cidade</label>
-            <input  id="city" maxlength="40" name="city" size="20" type="text" />
+            <input id="first_name" maxlength="40" name="first_name" size="20" type="text" required /> <label for="last_name">Sobrenome</label>
+            <input id="last_name" maxlength="80" name="last_name" size="20" type="text" required /> <label for="email">E-mail</label>
+            <input id="email" maxlength="80" name="email" size="20" type="email" required /> <label for="company">Empresa</label>
+            <input id="company" maxlength="40" name="company" size="20" type="text" required /> <label for="city">Cidade</label>
+            <input id="city" maxlength="40" name="city" size="20" type="text" />
 
             <label for="phone">Telefone</label>
-            <input  id="phone" maxlength="40" name="phone" size="20" type="text" />
-
-            <label for="00Nbm00000OtAP7">Sua Principal Necessidade:</label>
-            <textarea id="00Nbm00000OtAP7" name="00Nbm00000OtAP7" rows="3" type="text" wrap="soft"></textarea>
-
-             <label for="00Nbm00000OtYjB">Faixa de Orçamento Estimada:</label>
+             <input id="phone" maxlength="40" name="phone" size="20" type="tel" required /> <label for="00Nbm00000OtAP7">Sua Principal Necessidade:</label>
+            <textarea id="00Nbm00000OtAP7" name="00Nbm00000OtAP7" rows="3" wrap="soft" required></textarea> <label for="00Nbm00000OtYjB">Faixa de Orçamento Estimada:</label>
              <select id="00Nbm00000OtYjB" name="00Nbm00000OtYjB" title="Faixa de Orçamento Estimada">
                 <option value="">-- Selecione --</option>
                 <option value="< $5,000">Menos de R$5.000</option>
@@ -191,7 +183,7 @@
              </select>
 
             <label for="00Nbm00000Ot87K">Como nos Conheceu?:</label>
-            <textarea id="00Nbm00000Ot87K" name="00Nbm00000Ot87K" rows="2" type="text" wrap="soft"></textarea>
+             <textarea id="00Nbm00000Ot87K" name="00Nbm00000Ot87K" rows="2" wrap="soft"></textarea>
 
             <div class="g-recaptcha" data-sitekey="6LdD4BorAAAAANeouwcpDIc-_et1qwT6iR7Egwt9"></div>
 
